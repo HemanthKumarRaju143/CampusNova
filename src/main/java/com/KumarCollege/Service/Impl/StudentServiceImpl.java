@@ -318,6 +318,7 @@ public class StudentServiceImpl implements StudentService {
         StudentResponse response = new StudentResponse();
 
         response.setStudentId(student.getStudentId());
+        response.setProgramId(student.getProgramId());
         response.setAdmissionNumber(student.getAdmissionNumber());
         response.setFirstName(student.getFirstName());
         response.setLastName(student.getLastName());

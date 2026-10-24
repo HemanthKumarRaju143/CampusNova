@@ -33,8 +33,6 @@ public class SubjectController {
                 .body(subjectService.createSubjects(requests));
     }
 
-
-    // Get all subjects, optionally filtered by status.
     @GetMapping
     public ResponseEntity<Page<SubjectResponse>> getAllSubjects(
             @RequestParam(required = false) SubjectStatus status,

@@ -41,12 +41,8 @@ public class ProgramCurriculumController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
 
-        return ResponseEntity.ok(
-                curriculumService.getAll(
-                        programId, subjectId, semester,
-                        isMandatory, page, size
-                )
-        );
+        return ResponseEntity.ok(curriculumService
+                .getAll(programId, subjectId, semester, isMandatory, page, size));
     }
 
     // READ: one record.

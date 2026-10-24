@@ -22,13 +22,12 @@ public class TeachingAssignment {
     @Column(name = "subject_id", nullable = false)
     private Long subjectId;
 
-    // CHANGED: SQL uses staff_id, not teacher_id.
     @Column(name = "staff_id", nullable = false)
     private Long staffId;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
-    // CHANGED: Match the SQL default.
+
     private AssignmentStatus status = AssignmentStatus.ACTIVE;
 
     @Column(name = "assigned_at", nullable = false, updatable = false)
@@ -37,7 +36,6 @@ public class TeachingAssignment {
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
-    // CHANGED: Set both required timestamps when creating the entity.
     @PrePersist
     protected void onCreate() {
         LocalDateTime now = LocalDateTime.now();
