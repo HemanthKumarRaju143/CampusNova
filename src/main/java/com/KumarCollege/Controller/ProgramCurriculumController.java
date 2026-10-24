@@ -53,7 +53,6 @@ public class ProgramCurriculumController {
     @GetMapping("/{id}")
     public ResponseEntity<ProgramCurriculumResponse> getById(
             @PathVariable Long id) {
-
         return ResponseEntity.ok(curriculumService.getById(id));
     }
 
